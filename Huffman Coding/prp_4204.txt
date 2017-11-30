@@ -1,0 +1,41 @@
+HANDOUT 2 ADHERED
+
+>>>>henc_4204.java
+
+However, henc_4204.java noticeably takes much longer than it expected.
+
+My algorithm makes this code run longer than ten minutes for 2MiB file,
+
+however when testing much smaller files (<200KB) 
+There is reasonable time 
+to encode.
+
+I tried this on different file types and I got interesting results when opening
+the .huf encoded file. Because hdec_4204 is incomplete, there is data loss.
+The clearest results are with encoded .txt files.
+There is one particular bug I encountered, when writing escape sequences
+such as \n, I'm not 100% sure if it carries over properly into the decoding process.
+_______________________
+
+>>>>hdec_4204.java
+
+Minimally, I read through the Huffman encoded file, and process all the
+
+information written from that file and write it into the "decoded"
+
+file without the ".huf" extension.
+
+_______________________
+
+Assuming there is some text file called "input.txt" compile/run as follows:
+
+%cp input.txt file1
+
+%javac henc_4204.java
+
+%java henc_4204 file1
+
+
+%javac hdec_4204.java
+
+%java hdec_4204 file1.huf
